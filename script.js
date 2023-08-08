@@ -1,3 +1,6 @@
+window.addEventListener('scroll', setScrollVar);
+window.addEventListener('resize', setScrollVar);
+
 function setScrollVar() {
   const htmlElement = document.documentElement;
   // console.log(htmlElement);
@@ -10,3 +13,5 @@ function setScrollVar() {
     Math.min(percentOfScreenHeightScrolled * 100, 100)
   );
 }
+
+setScrollVar();
