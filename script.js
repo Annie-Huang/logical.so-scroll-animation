@@ -6,8 +6,11 @@ function setScrollVar() {
   // console.log(htmlElement);
 
   // percentOfScreenHeightScrolled = X means we have scroll X page(s), etc
-  const percentOfScreenHeightScrolled = htmlElement.scrollTop / htmlElement;
+  const percentOfScreenHeightScrolled =
+    htmlElement.scrollTop / htmlElement.clientHeight;
 
+  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+  // It will never get more than 100, if it scroll to the next page, we will just put '100' into --scroll
   htmlElement.style.setProperty(
     '--scroll',
     Math.min(percentOfScreenHeightScrolled * 100, 100)
