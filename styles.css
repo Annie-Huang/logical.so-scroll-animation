@@ -67,3 +67,8 @@ h1 {
     font-size: 72px;
   }
 }
+
+/* Need to set a default value for --scroll in case the user disabled javascript. */
+:root {
+  --scroll: 0;
+}
