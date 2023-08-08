@@ -5,3 +5,14 @@ https://github.com/Annie-Huang/logical.so-scroll-animation
 
 https://logical.so/
 ----------------------------------------------------------------------------------
+
+The way the original website do it with the home hero section is:
+Have this:
+<section id="hero" style="transform: translateY(0px);">
+
+And then in the javascript, manually control the transform (adds delay) when scrolling.
+so when it scroll it a little bit, you can see
+<section id="hero" style="transform: translateY(0px);">   <-- unchanged
+
+And when you scroll a little bit more, it becomes
+<section id="hero" style="transform: translateY(-5.19211%);">
