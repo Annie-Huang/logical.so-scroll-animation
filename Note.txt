@@ -3,4 +3,5 @@ How To Create This Unbelievable CSS Scroll Animation (https://www.youtube.com/wa
 https://github.com/WebDevSimplified/logical.so-scroll-animation
 https://github.com/Annie-Huang/logical.so-scroll-animation
 
+https://logical.so/
 ----------------------------------------------------------------------------------

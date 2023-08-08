@@ -1,0 +1,20 @@
+{
+  "name": "logical.so-scroll-animation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Annie-Huang/logical.so-scroll-animation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Annie-Huang/logical.so-scroll-animation/issues"
+  },
+  "homepage": "https://github.com/Annie-Huang/logical.so-scroll-animation#readme"
+}
