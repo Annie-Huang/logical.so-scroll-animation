@@ -1,0 +1,6 @@
+How To Create This Unbelievable CSS Scroll Animation (https://www.youtube.com/watch?v=-pDPASqX97w)
+
+https://github.com/WebDevSimplified/logical.so-scroll-animation
+https://github.com/Annie-Huang/logical.so-scroll-animation
+
+----------------------------------------------------------------------------------
