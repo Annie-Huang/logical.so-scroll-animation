@@ -20,7 +20,6 @@ h1 {
   height: 100vh;
   text-align: center;
   padding: 1rem;
-  position: relative;
 }
 
 .top-section .left,
@@ -49,8 +48,8 @@ h1 {
   );
 }
 
-@media (width <= 1000px) {
-  /*@media (max-width: 1000px) {*/
+/*@media (width <= 1000px) {*/
+@media (max-width: 1000px) {
   .top-section .right {
     display: none;
   }
@@ -71,4 +70,27 @@ h1 {
 /* Need to set a default value for --scroll in case the user disabled javascript. */
 :root {
   --scroll: 0;
+}
+
+.top-section {
+  position: sticky;
+  top: 0;
+
+  /* What we want is that we only start moving the .top-section when I scroll pass, e.g. 25%,
+     But I want to speed up the scrolling. so that when I scroll from 25% - 100%, the whole .top-section will be scroll up.
+     e.g. it scroll in the faster speed than .first-main-section
+   */
+
+  /* (oldVal - oldMin) * newRange / oldRange + newMin
+     so if we want to scroll to like 65% of the page, it will be
+     var(--scroll) = 65 = oldVal;
+     25 = oldMin
+     100 = newRange
+     75 = oldRange
+     0 = newMin
+
+     So calc(max(var(--scroll), 25) - 25) * 100 / 75) will give us the height it will be scrolling down once it pass 25%.
+     and then we need to '-1% *' to get the correct direction.
+  */
+  translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
 }
