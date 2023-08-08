@@ -48,3 +48,22 @@ h1 {
     rgb(189, 194, 194) 100%
   );
 }
+
+@media (width <= 1000px) {
+  /*@media (max-width: 1000px) {*/
+  .top-section .right {
+    display: none;
+  }
+
+  .top-section .left {
+    text-align: center;
+  }
+
+  body {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 72px;
+  }
+}
