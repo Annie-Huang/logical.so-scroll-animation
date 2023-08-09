@@ -114,3 +114,10 @@ h1 {
 .first-main-section {
   padding-top: 10vh;
 }
+
+.imgs > * {
+  position: fixed;
+  width: 100vw; /* the image itself have space in x-axis so makes them not touching the edge of the screen */
+  bottom: 0;
+  z-index: 10;
+}
