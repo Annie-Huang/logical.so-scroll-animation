@@ -127,3 +127,10 @@ h1 {
 .imgs > .show {
   translate: 0 0;
 }
+.imgs > .top-section-img {
+  /* (oldVal - oldMin) * newRange / oldRange + newMin
+     We want our image to grow its width from 50% (starting point) to 100%, so the newRange = 50
+     So --value will be 0 - 50%.
+  */
+  --value: min(var(--scroll), 30) * 50 / 30;
+}
