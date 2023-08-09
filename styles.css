@@ -120,4 +120,10 @@ h1 {
   width: 100vw; /* the image itself have space in x-axis so makes them not touching the edge of the screen */
   bottom: 0;
   z-index: 10;
+
+  translate: 0 100%;
+  transition: translate 250ms ease-in-out;
+}
+.imgs > .show {
+  translate: 0 0;
 }
