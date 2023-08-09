@@ -37,14 +37,14 @@ h1 {
 }
 
 .top-section .left {
-  background-color: rgb(248, 250, 249);
+  background-color: rgb(248, 250, 249, var(--background-opacity));
 }
 
 .top-section .right {
   background: linear-gradient(
     210.65deg,
-    rgb(152, 157, 157) 0%,
-    rgb(189, 194, 194) 100%
+    rgb(152, 157, 157, var(--background-opacity)) 0%,
+    rgb(189, 194, 194, var(--background-opacity)) 100%
   );
 }
 
@@ -76,7 +76,7 @@ h1 {
   position: sticky;
   top: 0;
 
-  /* What we want is that we only start moving the .top-section when I scroll pass, e.g. 25%,
+  /* What we want is that we only start moving the .top-section (background) when I scroll pass, e.g. 25%,
      But I want to speed up the scrolling. so that when I scroll from 25% - 100%, the whole .top-section will be scroll up.
      e.g. it scroll in the faster speed than .first-main-section
    */
@@ -92,5 +92,20 @@ h1 {
      So calc(max(var(--scroll), 25) - 25) * 100 / 75) will give us the height it will be scrolling down once it pass 25%.
      and then we need to '-1% *' to get the correct direction.
   */
-  translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+  /*translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);*/
+
+  /* What we want is that when the page is launch, has the original background color, meaning full opacity.
+     So the original .top-section left and right background color CAN show
+     e.g. background-color: rgb(248, 250, 249, var(--background-opacity));
+          In rgba, when a = 1, it means use original rgb background color for .top-section
+
+     When it gets pass the 30% mark, we want to blockage of original background color, meaning no opacity, total transparent.
+     So the original .top-section left and right background color CAN NOT show
+     Therefore, take the original body background color instead
+     e.g. background-color: rgb(248, 250, 249, var(--background-opacity));
+          In rgba, when a = 0, it means no original rgb background color for .top-section, total transparent.
+
+     And when it scroll between 0 - 30% of the current page height, slowly remove the original .top-section background color.
+   */
+  --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
 }
