@@ -92,7 +92,7 @@ h1 {
      So calc(max(var(--scroll), 25) - 25) * 100 / 75) will give us the height it will be scrolling down once it pass 25%.
      and then we need to '-1% *' to get the correct direction.
   */
-  /*translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);*/
+  translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
 
   /* What we want is that when the page is launch, has the original background color, meaning full opacity.
      So the original .top-section left and right background color CAN show
@@ -108,4 +108,9 @@ h1 {
      And when it scroll between 0 - 30% of the current page height, slowly remove the original .top-section background color.
    */
   --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+
+/* Prefer to have the second section to come up so quickly to overlay the first section */
+.first-main-section {
+  padding-top: 10vh;
 }
