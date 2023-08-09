@@ -136,4 +136,7 @@ h1 {
 
   /* Get the width to grow from 50vw - 100vw when user scroll from 0 - 30% */
   width: calc(50vw + 1vw * var(--value));
+
+  /* We also want height to grow from 50% - 0 in y-axis when user scroll from 0 - 30% */
+  transform: translateY(calc(50% - 1% * var(--value)));
 }
