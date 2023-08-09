@@ -133,4 +133,7 @@ h1 {
      So --value will be 0 - 50%.
   */
   --value: min(var(--scroll), 30) * 50 / 30;
+
+  /* Get the width to grow from 50vw - 100vw when user scroll from 0 - 30% */
+  width: calc(50vw + 1vw * var(--value));
 }
