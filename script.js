@@ -11,8 +11,9 @@ function setScrollVar() {
 
   // console.log('htmlElement.scrollTop=', htmlElement.scrollTop);
   // console.log('htmlElement.clientHeight=', htmlElement.clientHeight);
+  console.log(percentOfScreenHeightScrolled * 100);
 
-  console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
+  // console.log(Math.min(percentOfScreenHeightScrolled * 100, 100));
   // It will never get more than 100, if it scroll to the next page, we will just put '100' into --scroll
   htmlElement.style.setProperty(
     '--scroll',

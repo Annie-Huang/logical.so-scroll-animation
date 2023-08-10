@@ -20,6 +20,7 @@ h1 {
   height: 100vh;
   text-align: center;
   padding: 1rem;
+  position: relative;
 }
 
 .top-section .left,
@@ -139,4 +140,17 @@ h1 {
 
   /* We also want height to grow from 50% - 0 in y-axis when user scroll from 0 - 30% */
   transform: translateY(calc(50% - 1% * var(--value)));
+}
+
+/* When we scroll around 20% of each page (e.g. when the <h1> just showed up in the background, then the image will start raising from the bottom
+   remember each .full-screen-section is 100vh
+*/
+[data-img-to-show] {
+  position: absolute;
+  top: 20%;
+
+  /* Tested that we can see the red area in each section so we can use it as a trigger to show the image. */
+  height: 100px;
+  width: 100%;
+  background: red;
 }
