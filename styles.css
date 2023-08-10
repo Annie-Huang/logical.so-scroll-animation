@@ -150,7 +150,7 @@ h1 {
   top: 20%;
 
   /* Tested that we can see the red area in each section so we can use it as a trigger to show the image. */
-  height: 100px;
-  width: 100%;
-  background: red;
+  /*height: 100px;*/
+  /*width: 100%;*/
+  /*background: red;*/
 }
