@@ -22,3 +22,19 @@ function setScrollVar() {
 }
 
 setScrollVar();
+
+const observer = new IntersectionObserver((entries) => {
+  // loop through from the end of the image array to the start of the image array
+  // So that when you scroll up from the 2nd section to the 1st section, the #img-1 will stay there.
+  for (let i = entries.length - 1; i >= 0; i--) {
+    const entry = entries[i];
+
+    // isIntersecting meaning it is on the page.
+    if (entry.isIntersecting) {
+    }
+  }
+});
+
+document.querySelectorAll('[data-img-to-show]').forEach((section) => {
+  observer.observe(section);
+});
